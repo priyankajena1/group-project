@@ -1,0 +1,44 @@
+/* signup.css */ body {
+font-family: Arial, sans-serif;
+background-image: url('login_img.png'); /* Background image */ background-size: cover;
+background-position: center; margin: 0;
+padding: 0;
+}
+.welcome-heading { text-align: center; margin-top: 50px; color: #f7f1f1;
+}
+.signup-wrapper { width: 400px; margin: 0 auto;
+background-color: rgba(233, 227, 227, 0.8); /* Background color with opacity */ border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 20px;
+}
+.form h2 {
+margin-bottom: 20px; color: #333;
+text-align: center;
+}
+.input-group {
+margin-bottom: 15px;
+}
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"] { width: 100%;
+padding: 10px;
+border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;
+}
+.input-group input[type="text"]:focus,
+.input-group input[type="email"]:focus,
+.input-group input[type="password"]:focus { outline: none;
+border-color: #007bff;
+}
+.input-group label { margin-left: 5px; color: #666;
+}
+.submit-btn {
+background-color: #007bff; color: #fff;
+border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;
+transition: background-color 0.3s; width: 100%;
+}
+.submit-btn:hover { background-color: #0056b3;
+}
+.forgot-password { display: block; margin-top: 10px; color: #007bff;
+text-decoration: none;
+}
+.forgot-password:hover { text-decoration: underline;
+}

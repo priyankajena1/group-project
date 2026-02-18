@@ -1,0 +1,107 @@
+/* Reset some default styles */ body,
+h1,
+h2,
+h3,
+p {
+margin: 0;
+padding: 0;
+}
+body {
+font-family: 'Montserrat', sans-serif; background-image: url('bank_img.png');
+background-size: cover; /* Cover the entire viewport */ background-position: center; /* Center the background image */ margin: 0;
+padding: 0; color: #fff;
+/* Change text color to white */
+}
+/* Navbar styles */ #nav-bar {
+background-color: #0b0a0a;
+background-image: linear-gradient(to top, #173161 0%, #1e3c72 1%, #2a5298 100%); padding: 10px 20px;
+}
+.navbar-brand img { width: 50px; margin-right: 10px;
+vertical-align: middle;
+}
+.navbar-toggler { color: #ffffff; border-color: #ffffff;
+}
+.navbar-nav .nav-item { margin-right: 15px;
+}
+.nav-link {
+color: #ffffff !important; text-decoration: none;
+font-family: 'Montserrat', sans-serif;
+}
+/* Banner section styles */ #main {
+text-align: center;
+padding: 50px 0;
+}
+#main h1 {
+margin-bottom: 20px;
+}
+#main img {
+border-radius: 20px;
+box-shadow: 3px 5px 10px rgb(0, 0, 0);
+}
+/* Features section styles */ #features {
+text-align: center; padding: 50px 0;
+}
+.download-button { margin-bottom: 10px;
+}
+/* Footer styles */ #footer {
+text-align: center; padding: 20px 0; color: #fff;
+background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%); margin-top: 50px;
+/* Increase top margin for spacing */
+}
+.social-icon { margin: 0 10px; font-size: 24px; color: #fff;
+}
+.btn1 {
+text-decoration: none; color: rgb(255, 255, 255);
+}
+.btn2 {
+text-decoration: none; color: rgb(255, 255, 255);
+}
+.container{
+color: rgb(255, 255, 255);
+font-family: 'Times New Roman', Times, serif;
+}
+/* Styling for the buttons */
+.download-button { margin-bottom: 10px;
+border-radius: 10px; /* Adjust border radius for smaller buttons */ padding: 8px 16px; /* Adjust padding for smaller buttons */ background-color: #1025a9; /* Change button color to black */ border: none;
+color: #fff; /* Change text color to white */
+font-size: 12px; /* Adjust font size for smaller buttons */ transition: background-color 0.3s;
+text-decoration: none; /* Remove default link underline */ display: inline-block; /* Make buttons display inline */
+}
+.download-button:hover {
+background-color: #1b5aa3; /* Darken button color on hover */
+}
+/* Styling for the text inside buttons */
+.download-button h3 {
+margin: 0; /* Remove default margin */
+}
+/* Adjust spacing between buttons */ #features .download-button {
+margin-right: 10px;
+}
+/* Remove extra buttons */
+#features .download-button:last-child { margin-right: 0;
+}
+.user-icon,
+.customer-support-icon,
+.message-icon { position: absolute;
+top: 15px; /* Adjust top position as needed */
+}
+.user-icon {
+right: 30px; /* Adjust right position as needed */ width: 30px; /* Adjust width as needed */ height: auto; /* Maintain aspect ratio */
+}
+.customer-support-icon {
+right: 80px; /* Adjust right position as needed */ width: 30px; /* Adjust width as needed */ height: auto; /* Maintain aspect ratio */
+}
+.message-icon { right: 140px;
+width: 30px; height: auto;
+}
+.customer-support-icon:hover{ cursor: pointer;
+}
+/* Add this CSS at the bottom of your CSS file */
+.logout-button { position: fixed; top: 67px; right: 30px;
+padding: 10px 20px; background-color: #1f25cb; 
+color: #fff;
+border: none; cursor: pointer; border-radius: 5px;
+z-index: 1000; /* Ensure it's above other elements */
+}
+.logout-button:hover { background-color: #0056b3;
+}

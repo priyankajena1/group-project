@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log in Page</title>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+<div class="button-container">
+<button class="page-button" onclick="redirectToATMPage()">ATM Finder</button>
+<button class="page-button" onclick="redirectToEMICalculatorPage()">EMI Calculator</button>
+<button class="page-button" onclick="redirectToAboutUsPage()">About Us</button>
+<button class="page-button" onclick="redirectToContactUsPage()">Contact Us</button>
+</div>
+<h2 class="welcome-heading">Welcome to All Citizens Bank</h2>
+<div class="login-wrapper">
+<form class="form">
+<h2>Log In To Your Account</h2>
+<div class="input-group">
+<input type="text" name="loginUser" id="username" placeholder="Enter your username" required />
+<label for="loginUser">User Name</label>
+</div>
+<div class="input-group">
+<input type="password" name="loginPassword" id="password" placeholder="Enter your password (min. 6 characters)" required minlength="6" />
+<label for="loginPassword">Password</label>
+</div>
+<input type="button" value="Login" class="submit-btn" onclick="auth()" />
+<a href="signup.html" class="signup-btn">Sign Up</a> <!-- Signup button -->
+<a href="forget_pass.html" class="forgot-password">Forgot Password?</a> <!-- Forgot Password link -->
+</form>
+</div>
+<script>
+function auth() {
+var username = document.getElementById("username").value; var password = document.getElementById("password").value; var storedUsername = localStorage.getItem("username");
+var storedPassword = localStorage.getItem("password");
+if (username && password) {
+if (username === storedUsername && password === storedPassword) { alert("Login successful!");
+window.location.href = "home.html";
+} else {
+}
+} else {
+alert("Invalid username or password"); document.getElementById("username").value = ""; document.getElementById("password").value = "";
+alert("Please enter both username and password");
+}
+}
+function redirectToATMPage() { window.location.href = "atm.html";
+}
+function redirectToEMICalculatorPage() { window.location.href = "emi.html";
+}
+function redirectToAboutUsPage() { window.location.href = "bank.html";
+}
+function redirectToContactUsPage() { window.location.href = "contact.html";
+}
+</script>
+</body>
+</html>
