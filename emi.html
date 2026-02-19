@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Loan EMI Calculator</title>
+<link rel="stylesheet" href="emi.css">
+<style>
+/* Styles for the buttons */
+.top-buttons { position: absolute; top: 10px;
+right: 10px;
+}
+/* Additional style for spacing between buttons */
+.top-buttons button { margin-left: 10px;
+}
+/* Styles for the heading */
+.emi-heading {
+text-align: center;
+}
+</style>
+</head>
+<body>
+<!-- Button container for Contact Us, About Us,and Home buttons -->
+<div class="top-buttons">
+<button class="page-button" onclick="redirectToHome()">Home</button>
+<button class="page-button" onclick="redirectToAboutUsPage()">About Us</button>
+<button class="page-button" onclick="redirectToContactUsPage()">Contact Us</button>
+</div>
+<h2 class="emi-heading">Personal Loan EMI Calculator</h2>
+<div class="calculator">
+<label for="loanAmount" class="title1">Loan Amount (in Rs.):</label>
+<input type="number" id="loanAmount" placeholder="Enter Loan Amount" required>
+<label for="interestRate" class="title2">Annual Interest Rate (%):</label>
+<input type="number" id="interestRate" placeholder="Enter Annual Interest Rate" required>
+<label for="loanTenure" class="title3">Loan Tenure (in months):</label>
+<input type="number" id="loanTenure" placeholder="Enter Loan Tenure" required>
+<button onclick="calculateEMI()">Calculate EMI</button>
+<div id="emiResult"></div>
+</div>
+<script>
+function calculateEMI() {
+var loanAmount = parseFloat(document.getElementById("loanAmount").value);
+var interestRate = parseFloat(document.getElementById("interestRate").value) / 100 / 12; // Monthly interest rate
+var loanTenure = parseFloat(document.getElementById("loanTenure").value);
+// Calculate EMI
+var emi = (loanAmount * interestRate * Math.pow(1 + interestRate, loanTenure)) / (Math.pow(1 + interestRate, loanTenure) - 1);
+// Display result
+document.getElementById("emiResult").innerHTML = "Your EMI: Rs. " + emi.toFixed(2);
+}
+// Function to redirect to About Us page function redirectToAboutUsPage() {
+window.location.href = "bank.html";
+}
+// Function to redirect to Contact Us page function redirectToContactUsPage() {
+window.location.href = "contact.html";
+}
+// Function to redirect to Home page function redirectToHome() {
+window.location.href = "login.html";
+}
+</script>
+</body>
+</html>

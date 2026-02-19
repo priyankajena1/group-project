@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open New Account - Internet Banking</title>
+<link rel="stylesheet" href="open_account.css">
+</head>
+<body>
+<header>
+<h1>Open New Account</h1>
+</header>
+<main>
+<section class="new-account-form">
+<h2>New Account Application Form</h2>
+<form id="account-form" action="openaccount.php" method="POST">
+<div class="form-group">
+<label for="full-name">Full Name:</label>
+<input type="text" id="full-name" name="fullName" required>
+</div>
+<div class="form-group">
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+</div>
+<div class="form-group">
+<label for="phone">Phone:</label>
+<input type="tel" id="phone" name="phone" required>
+</div>
+<div class="form-group">
+<label for="account-type">Account Type:</label>
+<select id="account-type" name="accountType" required>
+<option value="savings">Savings Account</option>
+<option value="current">Current Account</option>
+</select>
+</div>
+<div class="form-group">
+<label for="initial-deposit">Initial Deposit:</label>
+<input type="number" id="initial-deposit" name="intialDeposit" required>
+</div>
+<button type="submit">Submit Application</button>
+</form>
+</section>
+</main>
+<footer>
+<p>&copy; 2024 All Citizens Bank. All rights reserved.</p>
+</footer>
+</body>
+</html>
